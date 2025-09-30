@@ -27,7 +27,7 @@ export default function Pyramid({
 
   return (
     <div className="md:col-span-2 flex items-center justify-center">
-      <div className="w-full max-w-md relative h-[360px]" aria-hidden>
+      <div className="w-full max-w-md relative h-[360px] pb-6" aria-hidden>
         {arranged.map((lvl, idx) => {
           const width = widths[idx];
           const heightPct = 100 / Math.max(1, count);
@@ -45,12 +45,8 @@ export default function Pyramid({
                 height: `${heightPct}%`,
                 zIndex: 10 + idx,
               }}
-              className={`absolute transition-all bg-gradient-to-br ${
-                lvl.color
-              } ${
-                lvl.colorTo
-              } text-white/95 shadow-md rounded-2xl flex items-center gap-4 px-4 py-3 border border-white/10 ${
-                openId === lvl.id ? "ring-2 ring-white/70" : ""
+              className={`absolute transition-transform duration-200 ease-out transform hover:-translate-y-1 bg-gradient-to-br ${lvl.color} ${lvl.colorTo} text-white/95 shadow-md rounded-2xl flex items-center gap-4 px-4 py-3 border border-white/10 ${
+                openId === lvl.id ? "ring-2 ring-white/70 scale-[1.02]" : ""
               }`}
             >
               <span className="inline-flex items-center justify-center rounded-xl bg-white/12 p-2">
