@@ -13,8 +13,16 @@ export default function IntimacyHierarchy() {
 
   useEffect(() => {
     const raw = localStorage.getItem("intimacy-hierarchy-state-v1");
-    if (raw) setLevels(JSON.parse(raw));
-    else setLevels(seedLevels);
+    if (raw) {
+      try {
+        const parsed = JSON.parse(raw) as Level[];
+        // filter out any legacy/removed levels (like 'exploration')
+        const sanitized = parsed.filter((l) => l.id !== "exploration");
+        setLevels(sanitized.length ? sanitized : seedLevels);
+      } catch {
+        setLevels(seedLevels);
+      }
+    } else setLevels(seedLevels);
   }, []);
 
   useEffect(() => {

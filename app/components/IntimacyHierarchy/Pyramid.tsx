@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { ChevronDown } from "lucide-react";
+// no extra icons needed here
 import { Level } from "./types";
 import { getIcon } from "./icons";
 
@@ -13,38 +13,61 @@ export default function Pyramid({
   openId: string | null;
   onSelect: (id: string) => void;
 }) {
+  // Render stacked trapezoid slices (bottom -> top) so layers form a pyramid
+  const arranged = [...levels];
+  const count = arranged.length;
+  const topWidthPct = 40; // topmost width as %
+  const bottomWidthPct = 100;
+  const slopeRange = bottomWidthPct - topWidthPct; // 60
+
+  // widths[idx] is the base width for layer idx (0 = bottom)
+  const widths = arranged.map(
+    (_, idx) => bottomWidthPct - (idx / Math.max(1, count - 1)) * slopeRange
+  );
+
   return (
-    <div className="md:col-span-2 flex flex-col gap-3">
-      {levels.map((lvl) => (
-        <button
-          key={lvl.id}
-          onClick={() => onSelect(lvl.id)}
-          className={`group w-full text-left rounded-2xl p-4 border border-white/10 shadow-sm transition-all hover:shadow-md bg-gradient-to-br ${
-            lvl.color
-          } ${lvl.colorTo} text-white/95 ${
-            openId === lvl.id ? "ring-2 ring-white/70" : "opacity-90"
-          }`}
-        >
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex items-center justify-center rounded-xl bg-white/15 p-2">
+    <div className="md:col-span-2 flex items-center justify-center">
+      <div className="w-full max-w-md relative h-[360px]" aria-hidden>
+        {arranged.map((lvl, idx) => {
+          const width = widths[idx];
+          const heightPct = 100 / Math.max(1, count);
+          const bottomPos = idx * heightPct;
+          const left = (100 - width) / 2;
+
+          return (
+            <button
+              key={lvl.id}
+              onClick={() => onSelect(lvl.id)}
+              style={{
+                width: `${width}%`,
+                left: `${left}%`,
+                bottom: `${bottomPos}%`,
+                height: `${heightPct}%`,
+                zIndex: 10 + idx,
+              }}
+              className={`absolute transition-all bg-gradient-to-br ${
+                lvl.color
+              } ${
+                lvl.colorTo
+              } text-white/95 shadow-md rounded-2xl flex items-center gap-4 px-4 py-3 border border-white/10 ${
+                openId === lvl.id ? "ring-2 ring-white/70" : ""
+              }`}
+            >
+              <span className="inline-flex items-center justify-center rounded-xl bg-white/12 p-2">
                 {getIcon(lvl.icon)}
               </span>
-              <div>
-                <div className="font-semibold leading-tight">{lvl.title}</div>
+              <div className="text-left">
+                <div className="font-semibold text-sm sm:text-base leading-tight">
+                  {lvl.title}
+                </div>
                 {lvl.subtitle && (
                   <div className="text-xs opacity-80">{lvl.subtitle}</div>
                 )}
               </div>
-            </div>
-            <ChevronDown
-              className={`w-5 h-5 transition-transform ${
-                openId === lvl.id ? "rotate-180" : "rotate-0"
-              }`}
-            />
-          </div>
-        </button>
-      ))}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
