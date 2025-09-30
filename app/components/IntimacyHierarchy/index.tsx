@@ -71,7 +71,7 @@ export default function IntimacyHierarchy() {
           </h1>
           <div>
             <Button
-              variant="outline"
+              variant="secondary"
               onClick={() => {
                 const KEY = "intimacy-hierarchy-state-v1";
                 try {
@@ -80,6 +80,7 @@ export default function IntimacyHierarchy() {
                 setLevels(seedLevels);
                 setOpenId("physiology");
               }}
+              className="bg-neutral-800 text-neutral-100 border-neutral-700"
             >
               Reset
             </Button>
