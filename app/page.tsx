@@ -1,5 +1,5 @@
-import IntimacyHierarchyApp from "./IntimacyHierarchyApp";
+import IntimacyHierarchy from "./components/IntimacyHierarchy";
 
 export default function Page() {
-  return <IntimacyHierarchyApp />;
+  return <IntimacyHierarchy />;
 }
