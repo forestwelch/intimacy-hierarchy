@@ -5,6 +5,7 @@ import Pyramid from "./Pyramid";
 import Detail from "./Detail";
 import ItemEditor from "./ItemEditor";
 import { seedLevels } from "./data";
+import { Button } from "@/components/ui/button";
 import { Level, EditorState, Item } from "./types";
 
 export default function IntimacyHierarchy() {
@@ -64,16 +65,31 @@ export default function IntimacyHierarchy() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-neutral-900 to-neutral-800 text-neutral-100">
       <header className="sticky top-0 z-30 backdrop-blur-sm border-b border-neutral-800 bg-neutral-900/95">
-        <div className="max-w-6xl mx-auto px-8 py-4 flex items-center justify-center">
+        <div className="max-w-6xl mx-auto px-8 py-4 flex items-center justify-between">
           <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-center">
             Intimacy Hierarchy
           </h1>
+          <div>
+            <Button
+              variant="outline"
+              onClick={() => {
+                const KEY = "intimacy-hierarchy-state-v1";
+                try {
+                  localStorage.removeItem(KEY);
+                } catch {}
+                setLevels(seedLevels);
+                setOpenId("physiology");
+              }}
+            >
+              Reset
+            </Button>
+          </div>
         </div>
       </header>
       <main className="max-w-[1400px] mx-auto px-8 py-10 grid md:grid-cols-6 gap-10">
         <motion.div
           layout
-          className="md:col-span-2 flex items-center justify-center"
+          className="md:col-span-2 flex items-start justify-center"
         >
           <div className="w-full flex items-center justify-center py-6">
             <Pyramid levels={levels} openId={openId} onSelect={setOpenId} />
