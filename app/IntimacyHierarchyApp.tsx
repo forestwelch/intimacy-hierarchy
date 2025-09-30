@@ -119,10 +119,10 @@ export default function IntimacyHierarchyApp() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200 dark:from-neutral-900 dark:to-neutral-950 text-neutral-900 dark:text-neutral-100">
-      <header className="sticky top-0 z-20 backdrop-blur border-b border-white/10 bg-white/50 dark:bg-neutral-900/40">
-        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-          <h1 className="text-xl md:text-2xl font-bold tracking-tight">
+    <div className="min-h-screen bg-gradient-to-b from-neutral-50 to-neutral-100 dark:from-neutral-900 dark:to-neutral-950 text-neutral-900 dark:text-neutral-100">
+      <header className="sticky top-0 z-20 backdrop-blur-sm border-b border-white/10 bg-white/60 dark:bg-neutral-900/50">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+          <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
             Intimacy Hierarchy
           </h1>
           <div className="flex gap-2">
@@ -162,13 +162,13 @@ export default function IntimacyHierarchyApp() {
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-4 py-6 grid md:grid-cols-5 gap-4">
-        <div className="md:col-span-2 space-y-3">
+      <main className="max-w-5xl mx-auto px-6 py-8 grid md:grid-cols-5 gap-6">
+        <div className="md:col-span-2 space-y-4">
           {levels.map((lvl) => (
             <button
               key={lvl.id}
               onClick={() => setOpenId(lvl.id)}
-              className={`group w-full text-left rounded-2xl p-4 border border-white/10 shadow-sm transition-all hover:shadow-md bg-gradient-to-br ${
+              className={`group w-full text-left rounded-2xl p-4 border border-white/12 shadow-md transition-all hover:shadow-xl bg-gradient-to-br ${
                 lvl.color
               } ${lvl.colorTo} text-white/95 ${
                 openId === lvl.id ? "ring-2 ring-white/70" : "opacity-90"
@@ -208,8 +208,8 @@ export default function IntimacyHierarchyApp() {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.2 }}
               >
-                <Card className="rounded-2xl border-white/10 bg-white/80 dark:bg-neutral-900/70 backdrop-blur">
-                  <CardHeader className="flex flex-row items-center justify-between">
+                <Card className="rounded-2xl border-white/10 bg-white/90 dark:bg-neutral-900/80">
+                  <CardHeader className="flex flex-row items-center justify-between gap-3">
                     <div>
                       <CardTitle className="flex items-center gap-2 text-lg">
                         <span
@@ -244,7 +244,7 @@ export default function IntimacyHierarchyApp() {
                       {currentLevel.items.map((it) => (
                         <li
                           key={it.id}
-                          className="group flex items-start gap-3 p-3 rounded-xl border border-white/10 bg-white/60 dark:bg-neutral-800/60"
+                          className="group flex items-start gap-3 p-3 rounded-xl border border-white/8 bg-white/75 dark:bg-neutral-800/70"
                         >
                           <Badge
                             className={`${

@@ -34,7 +34,7 @@ export default function Detail({
           transition={{ duration: 0.28 }}
         >
           <Card className="bg-neutral-900/95 text-neutral-100 border border-neutral-800">
-            <CardHeader className="flex items-start md:flex-row md:items-center md:justify-between gap-3">
+            <CardHeader className="flex items-start md:flex-row md:items-center md:justify-between gap-4">
               <div>
                 <CardTitle className="flex items-center gap-2">
                   <span
@@ -62,7 +62,7 @@ export default function Detail({
                   <motion.li
                     layout
                     key={it.id}
-                    className="group flex items-start gap-3 p-3 rounded-xl border border-neutral-800 bg-neutral-900/80"
+                    className="group flex items-start gap-3 p-3 rounded-xl border border-neutral-800 bg-neutral-900/85 shadow-sm"
                   >
                     <Badge
                       className={`capitalize px-3 py-1 rounded-full text-sm ${
