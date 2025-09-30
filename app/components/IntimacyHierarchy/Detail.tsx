@@ -67,10 +67,10 @@ export default function Detail({
                     <Badge
                       className={`capitalize px-3 py-1 rounded-full text-sm ${
                         it.type === "goal"
-                          ? "bg-amber-700 text-amber-100"
+                          ? "bg-cyan-800 text-cyan-100"
                           : it.type === "practice"
-                          ? "bg-emerald-700 text-emerald-100"
-                          : "bg-sky-700 text-sky-100"
+                          ? "bg-emerald-800 text-emerald-100"
+                          : "bg-violet-800 text-violet-100"
                       }`}
                     >
                       {it.type}

@@ -2,31 +2,41 @@
   {
     "id": "physiology",
     "icon": "anchor",
-    "title": "Physiology & Safety",
-    "subtitle": "Body first",
-    "color": "from-violet-900",
-    "colorTo": "to-violet-700",
-    "description": "Feeling safe, supported, and regulated enough to engage with intimacy without spiraling.",
+    "title": "Physiological Safety",
+    "subtitle": "Caring for my body's needs",
+    "color": "from-rose-950",
+    "colorTo": "to-pink-700",
+    "description": "Feeling safe, supported, and regulated enough to engage with intimacy.",
     "items": [
       {
         "id": "phys-practice-1",
         "type": "practice",
-        "text": "Sleep 7–9h; morning light; hydration ritual."
+        "text": "~30 min yoga, meditation, or stretching before tech."
       },
       {
         "id": "phys-practice-2",
         "type": "practice",
-        "text": "Yoga + kettlebell 3x/week; gentle mobility on off days."
+        "text": "Pre-intimacy checks: rate pain, energy, desire."
       },
       {
-        "id": "phys-practice-3",
-        "type": "practice",
-        "text": "Daily pain plan: breath, heat/ice, stretches; track flare triggers."
+        "id": "phys-goal-1",
+        "type": "goal",
+        "text": "Create buffers around pain (soothing routines, downtime)."
+      },
+      {
+        "id": "phys-goal-2",
+        "type": "goal",
+        "text": "Safe space to explore intimacy with myself."
       },
       {
         "id": "phys-insight-1",
         "type": "insight",
-        "text": "Create a private, judgment-free space for self-touch & erotic exploration."
+        "text": "My body's limits are data, not a verdict."
+      },
+      {
+        "id": "phys-insight-2",
+        "type": "insight",
+        "text": "Being in pain causes stress and negative thinking — not proof of failure."
       }
     ]
   },
@@ -34,30 +44,35 @@
     "id": "emotional",
     "icon": "heart",
     "title": "Emotional Security & Trust",
-    "subtitle": "Self-trust, boundaries",
-    "color": "from-indigo-900",
-    "colorTo": "to-sky-700",
-    "description": "Feeling anchored enough to explore desire without fear or collapse.",
+    "subtitle": "Establishing self-trust and boundaries",
+    "color": "from-violet-900",
+    "colorTo": "to-indigo-600",
+    "description": "Feeling anchored enough to explore desire with curiosity and openness.",
     "items": [
       {
         "id": "emo-practice-1",
         "type": "practice",
-        "text": "Daily desire check-in (journal/voice): name wants without judgment."
+        "text": "Daily desire check-in: name wants without judgment."
       },
       {
         "id": "emo-practice-2",
         "type": "practice",
-        "text": "Yes/No calibration: pause, breathe, body-scan before commitments."
+        "text": "Pause + body-scan before saying yes or no."
       },
       {
         "id": "emo-goal-1",
         "type": "goal",
-        "text": "Build a desire map: solo, with others, emotional, kink curiosities."
+        "text": "Ability to say yes and no safely, even mid-scene."
       },
       {
         "id": "emo-insight-1",
         "type": "insight",
-        "text": "My needs are worthy; I can change my mind mid-scene/date."
+        "text": "My needs are worthy of attention, even as they change."
+      },
+      {
+        "id": "emo-insight-2",
+        "type": "insight",
+        "text": "The goal is presence, not securing a role or person."
       }
     ]
   },
@@ -65,40 +80,45 @@
     "id": "relational",
     "icon": "users",
     "title": "Relational Connection",
-    "subtitle": "Exploration with others",
-    "color": "from-cyan-900",
-    "colorTo": "to-emerald-600",
+    "subtitle": "Exploration of feelings and desires with others",
+    "color": "from-indigo-900",
+    "colorTo": "to-cyan-600",
     "description": "Safe, shame-free, consensual connection for touch, sex, and play.",
     "items": [
       {
-        "id": "rel-goal-1",
-        "type": "goal",
-        "text": "Find 1–2 low-pressure partners (FWB/cuddle buddy/play) aligned on clarity + pace."
-      },
-      {
         "id": "rel-practice-1",
         "type": "practice",
-        "text": "Name boundaries & aftercare needs explicitly; schedule check-ins."
+        "text": "Share boundaries + needs before engaging."
       },
       {
         "id": "rel-practice-2",
         "type": "practice",
-        "text": "Experiment safely: ability to slow down, take breaks, stop."
-      },
-      {
-        "id": "rel-insight-1",
-        "type": "insight",
-        "text": "Pipeline mindset: more than one outlet → less projection on any one person."
-      },
-      {
-        "id": "rel-goal-2",
-        "type": "goal",
-        "text": "List 3 topping scenes & 3 bottoming scenes I want to try again."
+        "text": "Name what scares and excites me with a partner."
       },
       {
         "id": "rel-practice-3",
         "type": "practice",
-        "text": "Attend a consent/kink workshop; schedule 1 guided practice session."
+        "text": "Bring up arousal openly if it happens during cuddling."
+      },
+      {
+        "id": "rel-goal-1",
+        "type": "goal",
+        "text": "Find 1–2 low-pressure partners (FWB/cuddle/play) aligned on clarity + pace."
+      },
+      {
+        "id": "rel-goal-2",
+        "type": "goal",
+        "text": "Presence of caring and consistent people in my life."
+      },
+      {
+        "id": "rel-goal-3",
+        "type": "goal",
+        "text": "Experience platonic physical intimacy with close friends."
+      },
+      {
+        "id": "rel-insight-1",
+        "type": "insight",
+        "text": "More than one outlet → less projection on any one person."
       }
     ]
   },
@@ -106,30 +126,45 @@
     "id": "intimacy",
     "icon": "flame",
     "title": "Deep Intimacy",
-    "subtitle": "Integration & expression",
-    "color": "from-emerald-900",
-    "colorTo": "to-green-600",
-    "description": "Freedom to express sexuality fully, with or without a partner, without pressure.",
+    "subtitle": "Integration and expression of feelings",
+    "color": "from-cyan-900",
+    "colorTo": "to-emerald-600",
+    "description": "Freedom to express sexuality and pursue deeper, longer relationships.",
     "items": [
-      {
-        "id": "intim-goal-1",
-        "type": "goal",
-        "text": "Cultivate a longer-term partner/partners aligned on values & pace."
-      },
       {
         "id": "intim-practice-1",
         "type": "practice",
-        "text": "Celebrate others’ experiences as inspiration, not comparison."
+        "text": "Weave sensual rituals into daily life with partners."
       },
       {
         "id": "intim-practice-2",
         "type": "practice",
-        "text": "Weave sensual rituals into daily life; art/creativity after scenes/dates."
+        "text": "Explore sexual scenes outside my comfort zone."
       },
       {
-        "id": "intim-practice-3",
-        "type": "practice",
-        "text": "Solo skill drills: rope knots, impact rhythms, dirty talk, receiving practice."
+        "id": "intim-goal-1",
+        "type": "goal",
+        "text": "Cultivate longer-term partners aligned on values + pace."
+      },
+      {
+        "id": "intim-goal-2",
+        "type": "goal",
+        "text": "Define exploratory, lofty sexual goals."
+      },
+      {
+        "id": "intim-goal-3",
+        "type": "goal",
+        "text": "Practice fluidity in giving and receiving love, sex, and care."
+      },
+      {
+        "id": "intim-insight-1",
+        "type": "insight",
+        "text": "Intimacy is a garden to tend, not a harvest to grab."
+      },
+      {
+        "id": "intim-insight-2",
+        "type": "insight",
+        "text": "Comparison can be a source of celebration and adoration."
       }
     ]
   }
