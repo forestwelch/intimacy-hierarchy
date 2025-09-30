@@ -2,41 +2,135 @@
   {
     "id": "physiology",
     "icon": "anchor",
-    "title": "1 · Safety",
+    "title": "Physiology & Safety",
     "subtitle": "Body first",
     "color": "from-violet-900",
     "colorTo": "to-violet-700",
     "description": "Feeling safe, supported, and regulated enough to engage with intimacy without spiraling.",
-    "items": []
+    "items": [
+      {
+        "id": "phys-practice-1",
+        "type": "practice",
+        "text": "Sleep 7–9h; morning light; hydration ritual."
+      },
+      {
+        "id": "phys-practice-2",
+        "type": "practice",
+        "text": "Yoga + kettlebell 3x/week; gentle mobility on off days."
+      },
+      {
+        "id": "phys-practice-3",
+        "type": "practice",
+        "text": "Daily pain plan: breath, heat/ice, stretches; track flare triggers."
+      },
+      {
+        "id": "phys-insight-1",
+        "type": "insight",
+        "text": "Create a private, judgment-free space for self-touch & erotic exploration."
+      }
+    ]
   },
   {
     "id": "emotional",
     "icon": "heart",
-    "title": "2 · Emotional Security & Trust",
+    "title": "Emotional Security & Trust",
     "subtitle": "Self-trust, boundaries",
     "color": "from-indigo-900",
     "colorTo": "to-sky-700",
     "description": "Feeling anchored enough to explore desire without fear or collapse.",
-    "items": []
+    "items": [
+      {
+        "id": "emo-practice-1",
+        "type": "practice",
+        "text": "Daily desire check-in (journal/voice): name wants without judgment."
+      },
+      {
+        "id": "emo-practice-2",
+        "type": "practice",
+        "text": "Yes/No calibration: pause, breathe, body-scan before commitments."
+      },
+      {
+        "id": "emo-goal-1",
+        "type": "goal",
+        "text": "Build a desire map: solo, with others, emotional, kink curiosities."
+      },
+      {
+        "id": "emo-insight-1",
+        "type": "insight",
+        "text": "My needs are worthy; I can change my mind mid-scene/date."
+      }
+    ]
   },
   {
     "id": "relational",
     "icon": "users",
-    "title": "3 · Relational Connection",
+    "title": "Relational Connection",
     "subtitle": "Exploration with others",
     "color": "from-cyan-900",
     "colorTo": "to-emerald-600",
     "description": "Safe, shame-free, consensual connection for touch, sex, and play.",
-    "items": []
+    "items": [
+      {
+        "id": "rel-goal-1",
+        "type": "goal",
+        "text": "Find 1–2 low-pressure partners (FWB/cuddle buddy/play) aligned on clarity + pace."
+      },
+      {
+        "id": "rel-practice-1",
+        "type": "practice",
+        "text": "Name boundaries & aftercare needs explicitly; schedule check-ins."
+      },
+      {
+        "id": "rel-practice-2",
+        "type": "practice",
+        "text": "Experiment safely: ability to slow down, take breaks, stop."
+      },
+      {
+        "id": "rel-insight-1",
+        "type": "insight",
+        "text": "Pipeline mindset: more than one outlet → less projection on any one person."
+      },
+      {
+        "id": "rel-goal-2",
+        "type": "goal",
+        "text": "List 3 topping scenes & 3 bottoming scenes I want to try again."
+      },
+      {
+        "id": "rel-practice-3",
+        "type": "practice",
+        "text": "Attend a consent/kink workshop; schedule 1 guided practice session."
+      }
+    ]
   },
   {
     "id": "intimacy",
     "icon": "flame",
-    "title": "4 · Deep Intimacy",
+    "title": "Deep Intimacy",
     "subtitle": "Integration & expression",
     "color": "from-emerald-900",
     "colorTo": "to-green-600",
     "description": "Freedom to express sexuality fully, with or without a partner, without pressure.",
-    "items": []
+    "items": [
+      {
+        "id": "intim-goal-1",
+        "type": "goal",
+        "text": "Cultivate a longer-term partner/partners aligned on values & pace."
+      },
+      {
+        "id": "intim-practice-1",
+        "type": "practice",
+        "text": "Celebrate others’ experiences as inspiration, not comparison."
+      },
+      {
+        "id": "intim-practice-2",
+        "type": "practice",
+        "text": "Weave sensual rituals into daily life; art/creativity after scenes/dates."
+      },
+      {
+        "id": "intim-practice-3",
+        "type": "practice",
+        "text": "Solo skill drills: rope knots, impact rhythms, dirty talk, receiving practice."
+      }
+    ]
   }
 ]
