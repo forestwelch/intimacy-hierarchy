@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-// no extra icons needed here
 import { Level } from "./types";
-import { getIcon } from "./icons";
 
 export default function Pyramid({
   levels,
@@ -13,54 +11,66 @@ export default function Pyramid({
   openId: string | null;
   onSelect: (id: string) => void;
 }) {
-  // Render stacked trapezoid slices (bottom -> top) so layers form a pyramid
   const arranged = [...levels];
   const count = arranged.length;
-  const topWidthPct = 40; // topmost width as %
-  const bottomWidthPct = 100;
-  const slopeRange = bottomWidthPct - topWidthPct; // 60
 
-  // widths[idx] is the base width for layer idx (0 = bottom)
+  const topWidthPct = 60;
+  const bottomWidthPct = 95;
+  const slopeRange = bottomWidthPct - topWidthPct;
+
   const widths = arranged.map(
     (_, idx) => bottomWidthPct - (idx / Math.max(1, count - 1)) * slopeRange
   );
+  // render top-to-bottom visually, but widths were computed bottom->top, so map by id
+  const widthById = new Map<string, number>();
+  arranged.forEach((lvl, idx) => widthById.set(lvl.id, widths[idx]));
+
+  const renderOrder = [...arranged].reverse();
 
   return (
     <div className="md:col-span-2 flex items-center justify-center">
-      <div className="w-full max-w-md relative h-[360px] pb-6" aria-hidden>
-        {arranged.map((lvl, idx) => {
-          const width = widths[idx];
-          const heightPct = 100 / Math.max(1, count);
-          const bottomPos = idx * heightPct;
-          const left = (100 - width) / 2;
+      <div
+        className="w-full max-w-xl flex flex-col items-center gap-5"
+        aria-hidden
+      >
+        {renderOrder.map((lvl) => {
+          const width = widthById.get(lvl.id) ?? bottomWidthPct;
+          const selected = openId === lvl.id;
 
           return (
-            <button
+            <div
               key={lvl.id}
-              onClick={() => onSelect(lvl.id)}
-              style={{
-                width: `${width}%`,
-                left: `${left}%`,
-                bottom: `${bottomPos}%`,
-                height: `${heightPct}%`,
-                zIndex: 10 + idx,
-              }}
-              className={`absolute transition-transform duration-200 ease-out transform hover:-translate-y-1 bg-gradient-to-br ${lvl.color} ${lvl.colorTo} text-white/95 shadow-md rounded-2xl flex items-center gap-4 px-4 py-3 border border-white/10 ${
-                openId === lvl.id ? "ring-2 ring-white/70 scale-[1.02]" : ""
-              }`}
+              role="group"
+              aria-labelledby={`lvl-${lvl.id}-label`}
+              className={`w-full flex justify-center`}
             >
-              <span className="inline-flex items-center justify-center rounded-xl bg-white/12 p-2">
-                {getIcon(lvl.icon)}
-              </span>
-              <div className="text-left">
-                <div className="font-semibold text-sm sm:text-base leading-tight">
+              <button
+                onClick={() => onSelect(lvl.id)}
+                aria-labelledby={`lvl-${lvl.id}-label`}
+                style={{ width: `${width}%` }}
+                className={`text-left rounded-2xl px-6 py-6 bg-gradient-to-br ${
+                  lvl.color
+                } ${
+                  lvl.colorTo
+                } text-white/95 shadow-xl border border-white/8 transition-transform duration-200 ease-out ${
+                  selected
+                    ? "ring-2 ring-white/70 scale-[1.01]"
+                    : "hover:-translate-y-1"
+                }`}
+              >
+                <span id={`lvl-${lvl.id}-label`} className="sr-only">
                   {lvl.title}
-                </div>
+                </span>
+                <span className="block font-semibold text-lg sm:text-xl leading-tight">
+                  {lvl.title}
+                </span>
                 {lvl.subtitle && (
-                  <div className="text-xs opacity-80">{lvl.subtitle}</div>
+                  <span className="block text-sm opacity-90">
+                    {lvl.subtitle}
+                  </span>
                 )}
-              </div>
-            </button>
+              </button>
+            </div>
           );
         })}
       </div>

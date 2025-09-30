@@ -2,10 +2,10 @@
   {
     "id": "physiology",
     "icon": "anchor",
-    "title": "1 · Physiology & Safety",
+    "title": "1 ·  & Safety",
     "subtitle": "Body first",
-    "color": "from-slate-900",
-    "colorTo": "to-slate-700",
+    "color": "from-violet-900",
+    "colorTo": "to-violet-700",
     "description": "Feeling safe, supported, and regulated enough to engage with intimacy without spiraling.",
     "items": []
   },
@@ -14,8 +14,8 @@
     "icon": "heart",
     "title": "2 · Emotional Security & Trust",
     "subtitle": "Self-trust, boundaries",
-    "color": "from-rose-900",
-    "colorTo": "to-pink-700",
+    "color": "from-indigo-900",
+    "colorTo": "to-sky-700",
     "description": "Feeling anchored enough to explore desire without fear or collapse.",
     "items": []
   },
@@ -24,8 +24,8 @@
     "icon": "users",
     "title": "3 · Relational Connection",
     "subtitle": "Exploration with others",
-    "color": "from-indigo-900",
-    "colorTo": "to-indigo-700",
+    "color": "from-cyan-900",
+    "colorTo": "to-emerald-600",
     "description": "Safe, shame-free, consensual connection for touch, sex, and play.",
     "items": []
   },
@@ -34,8 +34,8 @@
     "icon": "flame",
     "title": "4 · Deep Intimacy",
     "subtitle": "Integration & expression",
-    "color": "from-amber-900",
-    "colorTo": "to-orange-700",
+    "color": "from-emerald-900",
+    "colorTo": "to-green-600",
     "description": "Freedom to express sexuality fully, with or without a partner, without pressure.",
     "items": []
   }

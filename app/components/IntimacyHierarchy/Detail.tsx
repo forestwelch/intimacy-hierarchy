@@ -26,12 +26,20 @@ export default function Detail({
   return (
     <div className="md:col-span-3">
       <AnimatePresence mode="wait">
-        <motion.div key={level.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.28 }}>
-          <Card>
+        <motion.div
+          key={level.id}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 }}
+          transition={{ duration: 0.28 }}
+        >
+          <Card className="bg-neutral-900/95 text-neutral-100 border border-neutral-800">
             <CardHeader className="flex items-start md:flex-row md:items-center md:justify-between gap-3">
               <div>
                 <CardTitle className="flex items-center gap-2">
-                  <span className={`inline-flex items-center justify-center rounded-xl p-2 text-white bg-gradient-to-br ${level.color} ${level.colorTo}`}>
+                  <span
+                    className={`inline-flex items-center justify-center rounded-xl p-2 text-white bg-gradient-to-br ${level.color} ${level.colorTo}`}
+                  >
                     {getIcon(level.icon)}
                   </span>
                   {level.title}
@@ -39,7 +47,11 @@ export default function Detail({
                 <p className="mt-2 text-sm opacity-80">{level.description}</p>
               </div>
               <div className="flex gap-2">
-                <Button variant="outline" onClick={() => onEdit()}>
+                <Button
+                  variant="secondary"
+                  onClick={() => onEdit()}
+                  className="bg-neutral-800 text-neutral-100 border-neutral-700"
+                >
                   Add Item
                 </Button>
               </div>
@@ -47,16 +59,36 @@ export default function Detail({
             <CardContent>
               <ul className="space-y-3">
                 {level.items.map((it) => (
-                  <motion.li layout key={it.id} className="group flex items-start gap-3 p-3 rounded-xl border border-white/10 bg-white/60 dark:bg-neutral-800/60">
-                    <Badge className={`capitalize ${it.type === "goal" ? "bg-amber-100 text-amber-800" : it.type === "practice" ? "bg-emerald-100 text-emerald-800" : "bg-sky-100 text-sky-800"}`}>
+                  <motion.li
+                    layout
+                    key={it.id}
+                    className="group flex items-start gap-3 p-3 rounded-xl border border-neutral-800 bg-neutral-900/80"
+                  >
+                    <Badge
+                      className={`capitalize px-3 py-1 rounded-full text-sm ${
+                        it.type === "goal"
+                          ? "bg-amber-700 text-amber-100"
+                          : it.type === "practice"
+                          ? "bg-emerald-700 text-emerald-100"
+                          : "bg-sky-700 text-sky-100"
+                      }`}
+                    >
                       {it.type}
                     </Badge>
                     <div className="flex-1 leading-relaxed">{it.text}</div>
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
-                      <Button size="icon" variant="ghost" onClick={() => onEdit(it)}>
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        onClick={() => onEdit(it)}
+                      >
                         Edit
                       </Button>
-                      <Button size="icon" variant="ghost" onClick={() => onDelete(it.id)}>
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        onClick={() => onDelete(it.id)}
+                      >
                         Delete
                       </Button>
                     </div>
