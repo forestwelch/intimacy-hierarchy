@@ -11,17 +11,17 @@
       {
         "id": "phys-practice-1",
         "type": "practice",
-        "text": "~30 min yoga, meditation, or stretching before tech."
+        "text": "Upon waking: yoga, meditation, or stretching BEFORE looking at tech."
       },
       {
         "id": "phys-practice-2",
         "type": "practice",
-        "text": "Pre-intimacy checks: rate pain, energy, desire."
+        "text": "During breaks: rate pain, energy, desire on 1-10 scale."
       },
       {
         "id": "phys-goal-1",
         "type": "goal",
-        "text": "Create buffers around pain (soothing routines, downtime)."
+        "text": "Buffers around pain: nighttime routine, 5 minute breaths."
       },
       {
         "id": "phys-goal-2",
@@ -36,7 +36,7 @@
       {
         "id": "phys-insight-2",
         "type": "insight",
-        "text": "Being in pain causes stress and negative thinking — not proof of failure."
+        "text": "Being in pain causes stress and negative thinking. That stress and negative thinking does not need to be dealt with head on."
       }
     ]
   },
@@ -52,17 +52,17 @@
       {
         "id": "emo-practice-1",
         "type": "practice",
-        "text": "Daily desire check-in: name wants without judgment."
+        "text": "Morning routine: daily desire check in. Name wants without judgment."
       },
       {
         "id": "emo-practice-2",
         "type": "practice",
-        "text": "Pause + body-scan before saying yes or no."
+        "text": "Before agreeing to something: hand on chest, quick body scan, deep breath."
       },
       {
         "id": "emo-goal-1",
         "type": "goal",
-        "text": "Ability to say yes and no safely, even mid-scene."
+        "text": "Ability to say yes and no safely, even after already saying yes or no previously."
       },
       {
         "id": "emo-insight-1",
@@ -72,7 +72,7 @@
       {
         "id": "emo-insight-2",
         "type": "insight",
-        "text": "The goal is presence, not securing a role or person."
+        "text": "The goal is presence in my body and experience, not securing a role or person."
       }
     ]
   },
@@ -88,17 +88,17 @@
       {
         "id": "rel-practice-1",
         "type": "practice",
-        "text": "Share boundaries + needs before engaging."
+        "text": "Before engaging in intimacy: take a moment to feel into experience. Share boundaries + needs, no matter how 'weird' it seems to share."
       },
       {
         "id": "rel-practice-2",
         "type": "practice",
-        "text": "Name what scares and excites me with a partner."
+        "text": "As it comes up: name what scares and excites me with a partner."
       },
       {
         "id": "rel-practice-3",
         "type": "practice",
-        "text": "Bring up arousal openly if it happens during cuddling."
+        "text": "During cuddling: bring up arousal openly."
       },
       {
         "id": "rel-goal-1",
@@ -108,7 +108,7 @@
       {
         "id": "rel-goal-2",
         "type": "goal",
-        "text": "Presence of caring and consistent people in my life."
+        "text": "Presence of caring and consistent people in my life. People who demonstrate lack of care or consistency should be moved to secondary circles."
       },
       {
         "id": "rel-goal-3",
@@ -116,9 +116,24 @@
         "text": "Experience platonic physical intimacy with close friends."
       },
       {
+        "id": "rel-goal-4",
+        "type": "goal",
+        "text": "Work to disambiguate social, platonic, romantic, spiritual, sexual intimacy. Feel into the blurred lines and embrace the ambiguity."
+      },
+      {
         "id": "rel-insight-1",
         "type": "insight",
         "text": "More than one outlet → less projection on any one person."
+      },
+      {
+        "id": "rel-insight-2",
+        "type": "insight",
+        "text": "I do not need to understand my wants before I express them."
+      },
+      {
+        "id": "rel-insight-3",
+        "type": "insight",
+        "text": "Even if someone demonstrates a particular way of being, I do not need to do that too. Even if someone *doesn't* demonstrate a particular way of being, I am allowed to."
       }
     ]
   },
@@ -134,12 +149,12 @@
       {
         "id": "intim-practice-1",
         "type": "practice",
-        "text": "Weave sensual rituals into daily life with partners."
+        "text": "Daily: weave sensual rituals into life with self and partners. Yoga, breathing, EFT, hugs..."
       },
       {
         "id": "intim-practice-2",
         "type": "practice",
-        "text": "Explore sexual scenes outside my comfort zone."
+        "text": "When aroused: Give myself a second to allow sexual fantasies to arise. Explore scenes outside my comfort zone."
       },
       {
         "id": "intim-goal-1",
@@ -154,17 +169,17 @@
       {
         "id": "intim-goal-3",
         "type": "goal",
-        "text": "Practice fluidity in giving and receiving love, sex, and care."
+        "text": "Achieve ease and fluidity in giving and receiving love, sex, and care."
       },
       {
         "id": "intim-insight-1",
         "type": "insight",
-        "text": "Intimacy is a garden to tend, not a harvest to grab."
+        "text": "Intimacy is a garden to tend to, not a harvest to grab in one go. Spreading out my intimacy will reap a greater and more consistent harvest."
       },
       {
         "id": "intim-insight-2",
         "type": "insight",
-        "text": "Comparison can be a source of celebration and adoration."
+        "text": "Comparison can be a source of celebration and adoration. When I am feeling envious, see how much can be reappraised as inspiration."
       }
     ]
   }
