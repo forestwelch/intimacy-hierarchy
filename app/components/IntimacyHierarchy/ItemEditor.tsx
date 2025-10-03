@@ -50,7 +50,7 @@ export default function ItemEditor({
 
   return (
     <Dialog open={editor.open} onOpenChange={(o) => (o ? null : close())}>
-      <DialogContent className="sm:max-w-lg">
+      <DialogContent className="sm:max-w-lg bg-gradient-to-b from-neutral-900 to-neutral-800 text-neutral-100">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -58,12 +58,12 @@ export default function ItemEditor({
           transition={{ duration: 0.18 }}
         >
           <DialogHeader>
-            <DialogTitle>
+            <DialogTitle className="text-3xl">
               {editor.mode === "edit" ? "Edit Item" : "Add Item"}
             </DialogTitle>
           </DialogHeader>
-          <div className="space-y-3">
-            <div className="flex gap-2">
+          <div className="space-y-2">
+            <div className="flex gap-4 my-4">
               {(["goal", "practice", "insight"] as const).map((t) => (
                 <button
                   key={t}
@@ -85,7 +85,7 @@ export default function ItemEditor({
               className="min-h-[120px]"
             />
           </div>
-          <DialogFooter className="flex items-center justify-end gap-2">
+          <DialogFooter className="flex items-center justify-end gap-2 mt-4">
             <Button variant="ghost" onClick={close}>
               Cancel
             </Button>
